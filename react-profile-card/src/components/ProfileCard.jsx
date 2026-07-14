@@ -3,6 +3,8 @@ import ProfileHeader from "./ProfileHeader";
 import SkillsList from "./SkillsList";
 import ActionButtons from "./ActionButtons";
 
+import Greeting from './Greeting';
+
 const ProfileCard = ({ profile }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
@@ -22,6 +24,8 @@ const ProfileCard = ({ profile }) => {
 
   return (
     <article className={`profile-card ${isDarkMode ? "dark" : "light"}`}>
+      <Greeting name={profile.name}/>
+
       <button
         className="theme-button"
         onClick={handleToggleTheme}
@@ -37,7 +41,7 @@ const ProfileCard = ({ profile }) => {
       />
 
       <p className="profile-summary">{profile.summary}</p>
-
+     
       <SkillsList skills={profile.skills} />
 
       {showDetails && (
@@ -66,6 +70,7 @@ const ProfileCard = ({ profile }) => {
           You are now connected with {profile.name}.
         </p>
       )}
+      
     </article>
   );
 };
