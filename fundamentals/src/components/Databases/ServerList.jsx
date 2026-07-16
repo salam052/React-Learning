@@ -1,4 +1,3 @@
-import ServerCard from "./ServerCard";
 
 const ServerList = () => {
   const servers = [
@@ -20,16 +19,6 @@ const ServerList = () => {
     <div>
       <h2>Server List</h2>
 
-      <ul>
-        {servers.map((server) => (
-          <ServerCard
-            key={server.id}
-            name={server.name}
-            type={server.type}
-            isOnline={server.isOnline}
-          />
-        ))}
-      </ul>
     </div>
   );
 };

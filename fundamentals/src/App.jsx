@@ -1,10 +1,10 @@
 import './App.css';
-import ServerList from './components/Databases/ServerList';
+import BookList from './components/Books/BookList';
 
 function App() {
   return (
     <div className="App">
-      <ServerList/>
+      <BookList/>
     </div>
   );
 }
